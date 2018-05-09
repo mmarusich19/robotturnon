@@ -18,7 +18,13 @@ while True:
      import RoboPiLib as RPL
      import setup
      import time
-     print time.time()
-     RPL.servoWrite(0,0)
-     RPL.servoWrite(1,0)
-     exit()
+     start = time.time()
+     x = 2
+     while True:
+       elapsed = (time.time() - start)
+       x = 0
+       elapsed = int(elapsed)
+       if elapsed == 1:
+          RPL.servoWrite(0,0)
+          RPL.servoWrite(1,0)
+          exit()
